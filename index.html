@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8">
+    <title>ilcosmo.</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Intestazione con titolo e descrizione -->
+    <header id="header-text">
+      <h1><a href="https://it.wikipedia.org/wiki/Cosmo" target="_blank" rel="noopener">ilcosmo.</a></h1>
+      <p>
+        ecco il <a href="https://www.globalbioticinteractions.org/about" target="_blank" rel="noopener">sistema armonico</a><br>
+        di cui fanno parte gli <a href="https://www.inaturalist.org/pages/about" target="_blank" rel="noopener">esseri osservati</a><br>
+        nei confini del <a href="https://www.acquerisorgive.it/chi-siamo/inquadramento-geografico" target="_blank" rel="noopener">comprensorio</a><br>
+        del <a href="https://www.acquerisorgive.it/chi-siamo" target="_blank" rel="noopener">Consorzio di bonifica Acque Risorgive.</a>
+      </p>
+    </header>
+
+    <!-- Contenitore principale per la visualizzazione -->
+    <main id="interactions-container"></main>
+
+    <!-- Pannello informazioni dataset -->
+    <aside class="dataset-info">
+      <p>
+        <span style="font-variant: small-caps;">dataset</span><br>
+        <a href="https://www.inaturalist.org" target="_blank" rel="noopener">iNaturalist</a><br>
+        <a href="https://www.globalbioticinteractions.org" target="_blank" rel="noopener">GloBI</a>
+      </p>
+    </aside>
+    
+    <!-- Controlli toggle -->
+    <nav class="name-toggle">
+      [<a href="#" id="toggle-name">mostra nome comune</a>]<br>
+      [<a href="#" id="info-toggle">info</a>]
+    </nav>
+
+    <!-- Legenda interattiva -->
+    <aside id="info-panel" class="hidden">
+      <div class="legend-vertical">
+        <div><span class="color-box" style="background:#00FF00;"></span> Mutualismo (+/+)</div>
+        <div><span class="color-box" style="background:#FF0000;"></span> Sfruttamento (+/-)</div>
+        <div><span class="color-box" style="background:#FFA500;"></span> Sfruttamento (-/+)</div>
+        <div><span class="color-box" style="background:#0000FF;"></span> Commensalismo (+/0)</div>
+        <div><span class="color-box" style="background:#00FFFF;"></span> Commensalismo (0/+)</div>
+        <div><span class="color-box" style="background:#808080;"></span> Neutralismo (0/0)</div>
+        <div><span class="color-box" style="background:#FF00FF;"></span> Relazioni complesse</div>
+      </div>
+      <div class="info-text">
+        <p><strong>Distanza dal centro</strong><br>
+        Specie in comune con la specie centrale in modo<br>
+        relativo e proporzionale al massimo nella rete.<br>
+        <br>
+        <strong>Numero tra parentesi</strong><br>
+        Specie osservate tramite iNaturalist entro i confini <br>
+        del Consorzio di bonifica Acque Risorgive.</p>
+      </div>
+    </aside>
+
+    <!-- Script esterni e locali -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

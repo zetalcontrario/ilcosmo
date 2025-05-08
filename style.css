@@ -1,0 +1,140 @@
+/* ================ BASE & LAYOUT ================ */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  overflow: hidden;
+}
+
+/* ================ COMPONENTI PRINCIPALI ================ */
+/* Header */
+#header-text {
+  margin-left: 1%;
+}
+
+#header-text p {
+  font-size: 1.3em;
+}
+
+/* Contenitore interazioni */
+#interactions-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Elementi fissi (toolbar e info) */
+.dataset-info {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: right; 
+  color: #808080;
+  font-size: 0.8em;
+}
+
+.name-toggle {
+  font-size: 0.8em;
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  z-index: 1000;
+  text-align: right; 
+  line-height: 1.5;
+}
+
+/* ================ COMPONENTI SPECIE ================ */
+.central-species {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #000;
+  pointer-events: none;
+  text-align: center;
+}
+
+#center-species {
+  pointer-events: auto;
+}
+
+.species-link:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+
+/* ================ OVERLAY & CARD ================ */
+#page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 999; 
+  display: none;
+}
+
+#species-card {
+  z-index: 1000;
+}
+
+#hover-image {
+  position: fixed;
+  z-index: 999;
+  top: 20px;
+  right: 20px;
+  width: 350px;
+  height: auto;
+  display: none;
+  border-radius: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.blurred {
+  filter: blur(1.5px);
+}
+
+/* ================ PANNELLO INFO/LEGENDA ================ */
+#info-panel {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  font-size: 0.8em;
+  line-height: 1.5;
+  color: #333;
+  display: none;
+}
+
+#info-panel.visible {
+  display: block;
+}
+
+/* Elementi legenda */
+.legend-vertical div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+.color-box {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.info-text {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+  border-top: 1px solid #eee;
+  line-height: 1.2;
+}
+
